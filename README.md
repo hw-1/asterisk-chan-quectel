@@ -2,6 +2,14 @@ Channel driver for Quectel and Simcom modules
 =================================================
 This should work with Quectel modules such as EC20, EC21, EC25, EG9x and Simcom sim7600 and possibly other models with voice over USB capability. Tested with the EC25-E mini-pcie module and Waveshare sim7600 g-h dongle. If the product page of your Quectel module contains the application note Voice over USB and UAC or Voice over UAC, you should be good to go. Praise God! Have been able to integrate ALSA support for UAC mode, steps to use UAC can be found <a href="https://github.com/IchthysMaranatha/asterisk-chan-quectel/discussions/2">here</a> If using Quectel serial audio port, please ensure gps messages has been turned off with AT+QGPSCFG="outport","none"
 
+important Notice:</br>
+SIM82xxx not support read and write audio data from /de/vttyUSB4, don't buy it now,
+<a href="https://www.waveshare.com/wiki/SIM8202G-M2_5G_HAT_(B)" >SIM8202G</a></br>
+SIM82xxx not support read and write audio data from /de/vttyUSB4, don't buy it now,
+<a href="https://www.waveshare.com/wiki/SIM8202G-M2_5G_HAT_(B)" >SIM8202G</a></br>
+SIM82xxx not support read and write audio data from /de/vttyUSB4, don't buy it now,
+<a href="https://www.waveshare.com/wiki/SIM8202G-M2_5G_HAT_(B)" >SIM8202G</a></br>
+
 Note for Pi users: If using a Pi and especially a device older than Pi4, you will invariably have problems of various kinds if powering the modem using a Pi usb port due to the current limiting circuit (600ma - 1.2A). Even with a Pi 4, you will not be able to stably handle modem devices with a larger power draw (2.1A) than that of the waveshare sim7600 dongle. You will need to provide independent power to the modem without using the Pi usb port which must only be used for data communication. If the modem device is a Pi HAT, you can provide power by stacking and using a beefy power supply. 
 
 I'm not a C programmer at all and this write-up may help those interested in improving this driver and also for supporting other modules such as those from Telit, U-blox, Sierra Wireless etc. 
