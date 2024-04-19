@@ -273,7 +273,9 @@ EXPORT_DEF int at_parse_creg (char* str, unsigned len, int* gsm_reg, int* gsm_re
 			return -1;
 		}
 
-		if (*gsm_reg_status == 1 || *gsm_reg_status == 5)
+    //sim7600 creg response 2,3 but gsm register is ok
+		if (*gsm_reg_status == 1 || *gsm_reg_status == 5 \
+			|| *gsm_reg_status == 2)
 		{
 			*gsm_reg = 1;
 		}
